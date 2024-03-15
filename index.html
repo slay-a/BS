@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <title>Empty Bootstrap Carousel with Black Border</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+          overflow-x: hidden; 
+          margin: 10px;
+          background-color: #ead9f5;
+         
+ 
+ 
+      }
+    .nav-link {
+        color:#4b0499 !important; 
+        background-color: transparent !important; 
+        border-bottom: 2px solid transparent !important; 
+        
+    }
+    .nav-link:hover {
+        color: #865ab1 !important; 
+        background-color: transparent !important; 
+        border-bottom: 2px solid transparent !important; 
+    }
+    .container.mt-0 {
+        position: relative;
+       top: -375px; 
+    }
+   p, h1, h2{
+    margin: 5px;
+   }
+   .double-border {
+        border-top: 1px double #343a40 !important; 
+        border-bottom: 1px double #343a40 !important;
+        padding: 3px; 
+    }
+    img.rounded {
+  border: 0;
+}
+
+.second-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+
+.bench-sales .card-symbol,
+.recruitment .card-symbol,
+.meet-ai .card-symbol,
+.profiles .card-symbol {
+    top: 10px;
+    left: 10px;
+}
+
+
+.bench-sales .card-symbol::after,
+.recruitment .card-symbol::after,
+.meet-ai .card-symbol::after,
+.profiles .card-symbol::after {
+    content: "";
+    font-size: 1.5em;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.bench-sales .card-sym,
+.recruitment .card-sym,
+.meet-ai .card-sym,
+.profiles .card-sym {
+    top: 10px;
+    left: 10px;
+}
+
+
+.bench-sales .card-sym::after,
+.recruitment .card-sym::after,
+.meet-ai .card-sym::after,
+.profiles .card-sym::after {
+    content: "";
+    font-size: 1.5em;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.typing-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    display: inline-block;
+    border-right: 2px solid; 
+    font-family: 'serif'; 
+    padding-top: 6px;
+}
+
+.typing-animation {
+    animation: typing 3s steps(30, end) forwards; 
+    border-right: 2px transparent; 
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+
+  
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.service-card {
+    flex: 1;
+    background-color: #ffffff; 
+    color: #000000; 
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+    border: 2px solid #000000; 
+}
+
+.card-content {
+    flex: 1;
+}
+
+.card-symbol {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.card-sym {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.service-card:hover {
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
+}
+@keyframes moveSymbols {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+    
+}
+@keyframes moveSym {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(50%, 50%);
+    }
+    100% {
+        transform: translate(50%, 50%);
+    }
+}
+
+.service-card:hover .card-symbol,
+.service-card:hover .card-symbol::after {
+    animation: moveSymbols 2s; 
+}
+
+.service-card:hover .card-sym,
+.service-card:hover .card-sym::after {
+    animation: moveSym 2s; 
+}
+
+.service-card .card-symbol,
+.service-card .card-symbol::after,
+.service-card .card-sym,
+.service-card .card-sym::after {
+    transition: transform 0.3s ease; 
+}
+
+
+.service-card .card-symbol,
+.service-card .card-sym {
+    transform: translate(0, 0);
+}
+
+
+.service-card:hover .card-symbol,
+.service-card:hover .card-symbol::after {
+    transform: translate(-50%, -50%);
+}
+
+
+.service-card:hover .card-sym,
+.service-card:hover .card-sym::after {
+    transform: translate(50%, 50%);
+}
+
+
+#top-navbar {
+            background-color:#ead9f5;
+            justify-content: center; 
+            display: flex;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+        }
+
+        #top-navbar a {
+            color: #4b0499;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        #top-navbar a:hover {
+        
+            color: #865ab1 !important; 
+        background-color: transparent !important; 
+        border-bottom: 2px solid transparent !important; 
+        }
+
+        .container-fluid {
+            padding-top: 60px; 
+        }
+
+        #navbar-example2 {
+            margin-top: 50px;
+            position: relative;
+            z-index: 1000;
+        }
+
+
+        .animate__animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animate__fadeInUp {
+    animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="top-navbar">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="login.html">Sign Up</a>
+    </div>
+    <!-- Navbar Start -->
+    <nav id="navbar-example2" class="navbar navbar-light px-3" style="background-color: #ead9f5;">
+        <img class="float-start w-2px" src="logot.png" style="width: 50px; height: auto;">
+        <h1 style="color: #4b0499;">Recruiters Training Hub</h1>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link active-home" href="#scrollspyHeading1">Welcome!</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading2">Section1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading3">Section2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading4">Section3</a>
+            </li>
+        </ul>
+    </nav>
+
+<div class="container mt-3">
+    <div class="row">
+        <div id="carousel1" class="carousel slide col-12 border border-none rounded" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner text-center rounded">
+                <div class="carousel-item active">
+                    <img src="lake1.jpeg" alt="Car1" class="rounded d-block mx-auto img-fluid" style="object-fit: cover; max-height: 300px; width: 100%;">
+                </div>
+                <div class="carousel-item">
+                    <img src="sunset1.jpeg" alt="Car2" class="rounded d-block mx-auto img-fluid" style="object-fit: cover; max-height: 300px; width: 100%;">
+                </div>
+                <div class="carousel-item">
+                    <img src="landscape1.jpeg" alt="Car3" class="rounded d-block mx-auto img-fluid" style="object-fit: cover; max-height: 300px; width: 100%;">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+</div>
+
+        
+        <!-- Scroll section -->
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+            <div class="row mt-3">
+                <div class="col-md-6 mt-3">
+                    <div class="text-container double-border rounded ms-3 animate-on-scroll">
+                        <h1 class="display-4" id="scrollspyHeading1">Welcome To RTB!</h1>
+                <p>Embark on a rewarding career as a US IT recruiter, domestic IT recruiter, or non-IT recruiter. RTB is your destination for comprehensive training programs, supporting professionals at all levels.</p>
+                <p>Our training programs offer practical exposure in recruitment, emphasizing HR and sales. From newcomers to seasoned professionals, we assist in finding employment until you secure a position.</p>
+                <p>Recruiters, regardless of background, benefit from our programs. Prerequisites include a degree, good English communication skills, and a basic understanding of technical knowledge. Refreshers cover topics like effective communication, office dynamics, soft skills development, resume crafting, interview preparation, and mock questions.</p>
+            </div>
+        </div>
+        <div class="col-md-6 mt-3">
+            <img src="guyrunt.png" class="rounded img-fluid float-end me-3 animate-on-scroll" alt="Image" style="height: 80%;">
+        </div>
+        </div>
+        <div class="row mt-3">
+        <div class="col-md-6">
+            <img src="man1t.png" class="rounded img-fluid ms-3 animate-on-scroll" alt="Image" style="height: 65%;">
+        </div>
+        <div class="col-md-6">
+            <div class="text-container double-border rounded  me-3 animate-on-scroll">
+                <h2 class="display-5" id="scrollspyHeading2">Section1</h2>
+                <p>Learn Recruitment concepts, become a Professional Recruiter covering HR or IT/Non-IT for Domestic/International roles. Explore commonly asked questions by job seekers for a unique synthesis of methods and techniques.</p>
+                <p>Our end-to-end recruitment services include sourcing, screening, and onboarding. We handle documentation and agreements for acquiring new clients. Corporate training solutions are available for your teams, led by expert trainers specializing in talent acquisition.</p>
+            </div>
+        </div>
+        </div>
+        <div class="row mt-3">
+        <div class="col-md-6">
+            <div class="text-container double-border rounded ms-3 animate-on-scroll">
+                <h2 class="display-5" id="scrollspyHeading3">Section2</h2>
+                <p>Specialized training for US IT recruiters, domestic IT recruiters, and non-IT recruiters. Our services encompass comprehensive English communication training, placement assistance, on-the-job support, soft skills development, resume crafting, interview preparation, and tailored corporate training solutions.</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="man2t.png" class="rounded img-fluid float-end animate-on-scroll" alt="Image" style="height: 100%;">
+        </div>
+        </div>
+          <div class="row">
+            <div class="col-md-8 mb-0">
+              <img src="man4t.png" class="rounded img-fluid ms-3 animate-on-scroll" alt="Image" style="height: 40%;">
+            </div>
+            <div class="col-md-4">
+              <div class="text-container double-border rounded ms-3 me-3 animate-on-scroll">
+                <h2 class="display-5" id="scrollspyHeading4">Section3</h2>
+                <p>Feel free to reach out to us at:</p>
+                <p>Email: pradhikahr@gmail.com</p>
+                <p>Phone: +91 79890 49955</p>
+                <p>We look forward to discuss further with you!</p>
+              </div>
+            </div>
+          </div>
+        
+            </div>
+          </div>
+          
+        </div>
+    </div>
+</div>
+
+<!--Cards Section-->
+<div class="container mt-0">
+<h1 class="typing-text">Jack of all trades</h1>
+<div class="second-section">
+        <div class="service-cards">
+            <div class="service-card bench-sales">
+                <span class="card-symbol"><h1>♚</h1></span>
+                <div class="card-content">
+                    <p><h4>Bench Sales</h4></p>
+                    <p>Our platform streamlines bench sales services by introducing IT experts to clients, matching consultants with projects, and promoting collaboration between consultants and client companies.</p>
+                </div>
+                <span class="card-sym"><h1>♚</h1></span>
+            </div>
+            <div class="service-card recruitment">
+                <span class="card-symbol"><h1>♛</h1></span>
+                <div class="card-content">
+                    <p><h4>Recruitment</h4></p>
+                    <p>Our hiring services utilize advanced recruitment techniques, industry knowledge, and a vast network to help companies establish high-performing teams, identify top candidates for their specific objectives and culture.</p>
+                </div>
+                <span class="card-sym"><h1>♛</h1></span>
+            </div>
+            <div class="service-card meet-ai">
+                <span class="card-symbol"><h1>♔</h1></span>
+                <div class="card-content">
+                    <p><h4>Meet AI</h4></p>
+                    <p>AI-powered solutions streamline the hiring process by scanning resumes, assessing applicant fit, and expediting recruitment, improving accuracy and effectiveness while saving time.</p>
+                </div>
+                <span class="card-sym"><h1>♔</h1></span>
+            </div>
+            <div class="service-card profiles">
+                <span class="card-symbol"><h1>♠</h1></span>
+                <div class="card-content">
+                    <p><h4>Profiles</h4></p>
+                    <p>Our platform gives job seekers and employers access to up-to-date, accurate professional profiles that highlight individuals' accomplishments and skills and help employers find qualified applicants swiftly.</p>
+                </div>
+                <span class="card-sym"><h1>♠</h1></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--pricing section-->
+<div class="container mt-0">
+    <h4 class="text-center mb-4" style="font-size: 50px;">Pricing</h4>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card border rounded" style="background-color: #FFC9C2; height: 300px;" onmouseover="this.classList.add('shadow');" onmouseout="this.classList.remove('shadow');">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title"><strong>Standard Plans</strong></h5>
+                    <p class="card-text flex-grow-1">Basic features for your needs. Perfect for getting started!</p>
+                    <button class="btn btn-primary mt-2">Try it!</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border rounded" style="background-color: #FFEDCC; height: 350px;" onmouseover="this.classList.add('shadow');" onmouseout="this.classList.remove('shadow');">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title"><strong>Premium Plans</strong></h5>
+                    <p class="card-text flex-grow-1">Advanced features for professionals. Unlock the full potential!</p>
+                    <button class="btn btn-primary mt-2">Try it!</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border rounded" style="background-color: #FFDBAC; height: 300px;" onmouseover="this.classList.add('shadow');" onmouseout="this.classList.remove('shadow');">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title"><strong>Student Plans</strong></h5>
+                    <p class="card-text flex-grow-1">Tailored for students. Affordable and packed with essential features!</p>
+                    <button class="btn btn-primary mt-2">Try it!</button>
+                </div>
+            </div>
+        </div>
+</div>
+
+
+</div>
+</div>
+
+
+<script>
+  var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("top-navbar").style.top = "0";
+            } else {
+                document.getElementById("top-navbar").style.top = "-50px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+    return (
+        rect.top >= -windowHeight * 0.5 &&
+        rect.left >= 0 &&
+        rect.bottom <= (windowHeight + windowHeight * 0.5) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function animateElementsOnScroll() {
+    const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+    elementsToAnimate.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.add('animate__animated', 'animate__fadeInUp');
+        } else {
+        
+            element.classList.remove('animate__animated', 'animate__fadeInUp');
+        }
+    });
+}
+
+
+window.addEventListener('scroll', animateElementsOnScroll);
+
+
+animateElementsOnScroll();
+
+
+
+
+
+
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function animateOnScroll() {
+    const elements = document.querySelectorAll('.typing-text');
+    elements.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.add('typing-animation');
+        }
+    });
+}
+window.addEventListener('scroll', animateOnScroll);
+animateOnScroll();
+
+    </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
